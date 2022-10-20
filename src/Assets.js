@@ -12,27 +12,28 @@ const Assets = ({ user ,getUser}) => {
   return (
     <div className="main">
       <div className="part">
-        <img src={picture?.large} alt="" />
-        <p>
-          {name.title} {name.first} {name.last}
-        </p>
+        <img className="user-pic" src={picture?.large} alt="" />
+        <h3>
+          {name?.title} {name?.first} {name?.last}
+        </h3>
       </div>
       <div className="part">
-        <img src={mailSvg} alt="" />
+        <img className="user-p" src={mailSvg} alt="" />
         <p>{email}</p>
       </div>
       <div className="part">
-        <img src={phoneSvg} alt="" />
+        <img className="user-p" src={phoneSvg} alt="" />
         <p>{phone} </p>
       </div>
       <div className="part">
-        <img src={mapSvg} alt="" />
+        <img className="user-p" src={mapSvg} alt="" />
         <p>
-          {location.state} {location.country}{" "}
+          {location?.state} {location?.country}{" "}
         </p>
       </div>
-      <p>bbbbbbbb</p>
-      <p>vvvvvvvvv</p>
+      <p className="par">Age:{dob?.age} </p>
+      <p className="par">Registered Date:{registered?.date}</p>
+      <button className='btn' onClick={() => getUser()}>Random User</button>
     </div>
   );
 };
